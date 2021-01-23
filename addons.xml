@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<addons><addon id="script.gtv.helper" name="GTV Helper" provider-name="roidy" version="0.0.3">
+    <requires>
+        
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="script.module.pil" version="1.1.7" />
+    </requires>
+
+    <extension library="service.py" point="xbmc.service" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">GTV helper</summary>
+        <description lang="en_GB">Helper script for GTV skin</description>
+        <platform>all</platform>
+    </extension>
+</addon><addon id="skin.gtv" name="GTV" provider-name="roidy" version="0.0.5~alpha">
+    <requires>
+        
+        <import addon="xbmc.gui" version="5.15.0" />
+        <import addon="script.toolbox" version="1.0.0" />
+        <import addon="script.embuary.helper" version="1.0.0" />
+        <import addon="script.embuary.info" version="1.0.0" />
+        <import addon="script.gtv.helper" />
+    </requires>
+    <extension debugging="false" effectslowdown="0.75" point="xbmc.gui.skin">
+        <res aspect="16:9" default="true" folder="xml" height="2160" width="3840" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">GTV by roidy</summary>
+        <platform>all</platform>
+        <license />
+        <forum /> 
+        <website />
+        <email />
+        <source />
+        <assets>
+        </assets> 
+    </extension>
+</addon><addon id="skin.singular" name="Singular" provider-name="roidy" version="0.0.4~alpha">
+    <requires>
+        
+        <import addon="xbmc.gui" version="5.15.0" />
+        <import addon="script.toolbox" version="1.0.0" />
+        <import addon="script.embuary.helper" version="1.0.0" />
+        <import addon="script.embuary.info" version="1.0.0" />
+    </requires>
+    <extension debugging="false" effectslowdown="0.75" point="xbmc.gui.skin">
+        <res aspect="16:9" default="true" folder="xml" height="2160" width="3840" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Singular by roidy</summary>
+        <platform>all</platform>
+        <license />
+        <forum /> 
+        <website />
+        <email />
+        <source />
+        <assets>
+        </assets> 
+    </extension>
+</addon></addons>
