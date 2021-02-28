@@ -34,7 +34,7 @@
         <description lang="en_GB">Helper script for GTV skin</description>
         <platform>all</platform>
     </extension>
-</addon><addon id="skin.gtv" version="0.0.6~alpha" name="GTV" provider-name="roidy">
+</addon><addon id="skin.gtv" version="0.0.7~alpha" name="GTV" provider-name="roidy">
     <requires>
         
         <import addon="xbmc.gui" version="5.15.0" />
