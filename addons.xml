@@ -3,9 +3,9 @@
 <addon id="repository.zero0q-matrix" name="zero0q's matrix test repository" version="0.0.1" provider-name="zero0q">
     <extension point="xbmc.addon.repository" name="zero0q's matrix test repository">
         <dir>
-            <info compressed="false">https://raw.githubusercontent.com/zero0q/repository.zero0q-matrix/main/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/zero0q/repository.zero0q-matrix/main/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/zero0q/repository.zero0q-matrix/main/</datadir>
+            <info compressed="false">https://raw.githubusercontent.com/Zero0Q/repository.zero0q-matrix/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/Zero0Q/repository.zero0q-matrix/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/Zero0Q/repository.zero0q-matrix/master/zips/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
