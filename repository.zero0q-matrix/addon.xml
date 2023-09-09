@@ -13,8 +13,7 @@
         <disclaimer></disclaimer>
         <platform>all</platform>
         <assets>
-            <icon>icon.png</icon>
-            <icon>fanart.png</icon>
+            <icon>icon.jpg</icon>
         </assets>
     </extension>
 </addon>
