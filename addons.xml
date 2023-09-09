@@ -1,29 +1,8 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="skin.singular" version="0.0.4~alpha" name="Singular" provider-name="roidy">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="script.gtv.helper" name="GTV Helper" version="0.0.3" provider-name="roidy">
     <requires>
-        
-        <import addon="xbmc.gui" version="5.15.0" />
-        <import addon="script.toolbox" version="1.0.0" />
-        <import addon="script.embuary.helper" version="1.0.0" />
-        <import addon="script.embuary.info" version="1.0.0" />
-    </requires>
-    <extension point="xbmc.gui.skin" debugging="false" effectslowdown="0.75">
-        <res width="3840" height="2160" aspect="16:9" default="true" folder="xml" />
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">Singular by roidy</summary>
-        <platform>all</platform>
-        <license />
-        <forum /> 
-        <website />
-        <email />
-        <source />
-        <assets>
-        </assets> 
-    </extension>
-</addon><addon id="script.gtv.helper" name="GTV Helper" version="0.0.3" provider-name="roidy">
-    <requires>
-        
+        <!-- <import addon="xbmc.python" version="2.25.0" /> -->
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.pil" version="1.1.7" />
     </requires>
@@ -34,9 +13,11 @@
         <description lang="en_GB">Helper script for GTV skin</description>
         <platform>all</platform>
     </extension>
-</addon><addon id="skin.gtv" version="0.1.4~alpha" name="GTV" provider-name="roidy">
+</addon>
+
+<addon id="skin.gtv" version="0.1.7~alpha" name="GTV" provider-name="zero0q">
     <requires>
-        
+        <!-- <import addon="xbmc.gui" version="5.14.0"/> -->
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" />
         <import addon="script.skinvariables" />
@@ -49,13 +30,14 @@
         <res width="3840" height="2160" aspect="16:9" default="true" folder="xml" />
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">GTV by roidy</summary>
+        <summary lang="en_GB">GTV by zero0q</summary>
         <platform>all</platform>
-        <license />
-        <forum />
-        <website />
-        <email />
-        <source />
-        <assets />
+        <license></license>
+        <forum></forum>
+        <website></website>
+        <email></email>
+        <source></source>
+        <assets></assets>
     </extension>
-</addon></addons>
+</addon>
+</addons>
