@@ -1,0 +1,20 @@
+<colors>
+    <color name="Primary">ff00aeff</color>
+    <color name="PrimaryDark">ff007ab3</color>
+    <color name="TextBright">fff0f0f0</color>
+    <color name="TextMid">b2b2b2b2</color>
+    <color name="TextDim">ff707070</color>
+    <color name="TextDark">ff303030</color>
+    <color name="MainMenuDark">b0303030</color>
+    <color name="TextSubLabel">b2d0d0d0</color>
+    <color name="MenuItemBackground">40727272</color>
+    <color name="InfoIconBackground">d0e0e0e0</color>
+
+    <color name="ScreenFade">f0282828</color>
+    <color name="ScreenFadeLight">a0282828</color>
+    <color name="DialogBackground">fa161616</color>
+    <color name="DialogList">ff121212</color>
+
+    <color name="Black">ff000000</color>
+    <color name="White">ffffffff</color>
+</colors>
