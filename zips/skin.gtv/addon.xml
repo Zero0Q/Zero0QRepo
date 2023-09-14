@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.gtv" version="0.1.7~alpha" name="GTV" provider-name="zero0q">
+<addon id="skin.gtv" version="0.1.8~alpha" name="GTV" provider-name="zero0q">
     <requires>
         <!-- <import addon="xbmc.gui" version="5.14.0"/> -->
         <import addon="xbmc.gui" version="5.15.0" />
