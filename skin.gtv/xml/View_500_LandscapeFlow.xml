@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <include name="View_500_LandscapeFlow">
+        <control type="group">
+            <visible>Control.IsVisible(500)</visible>
+
+            <!-- Hidden list for sets -->
+            <control type="list" id="5500">
+                <visible>String.IsEqual(ListItem.dbtype,set)</visible>
+                <left>-1000</left>
+                <itemlayout />
+                <focusedlayout />
+                <content type="video">$INFO[ListItem.FolderPath]</content>
+            </control>
+
+            <!-- Hidden button for fullscreen art -->
+            <control type="button" id="96">
+                <left>-1000</left>
+                <ondown>500</ondown>
+                <onup>500</onup>
+            </control>
+
+            <!-- Include main info -->
+            <include content="MainInfoView">
+                <param name="ID" value="500" />
+            </include>
+            
+            <include content="BottomAlignedPlot">
+                <param name="id" value="1" />
+            </include>
+
+            <control type="fixedlist" id="500">
+                <visible>$EXP[Exp_View_500]</visible>
+
+                <top>1200</top>
+                <left>0</left>
+                <right>0</right>
+                <height>740</height>
+
+                <onleft>500</onleft>
+                <onright>500</onright>
+                <onup>96</onup>
+                <ondown>60</ondown>
+
+                <pagecontrol>60</pagecontrol>
+                <preloaditems>2</preloaditems>
+                <orientation>horizontal</orientation>
+                <focusposition>0</focusposition>
+                <movement>3</movement>
+                <viewtype label="$LOCALIZE[32001]">icon</viewtype>
+
+                <!-- Movies / TV Shows / Seasons / Sets / Episodes -->
+                <itemlayout width="866" height="740">
+                    <control type="group">
+                        <left>182</left>
+                        <include content="LandscapeLayout">
+                            <param name="LabelColor" value="TextDim" />
+                            <param name="Focused" value="false" />
+                            <param name="ListID" value="500" />
+                            <param name="ShowProgress" value="true" />
+                        </include>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout width="866" height="740">
+                    <control type="group">
+                        <visible>Control.HasFocus(500)</visible>
+                        <left>182</left>
+                        <include content="LandscapeLayout">
+                            <param name="LabelColor" value="TextBright" />
+                            <param name="Focused" value="true" />
+                            <param name="ListID" value="500" />
+                            <param name="ShowProgress" value="true" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <visible>!Control.HasFocus(500)</visible>
+                        <left>182</left>
+                        <include content="LandscapeLayout">
+                            <param name="LabelColor" value="TextDim" />
+                            <param name="Focused" value="true" />
+                            <param name="ListID" value="500" />
+                            <param name="ShowProgress" value="true" />
+                        </include>
+                    </control>
+                </focusedlayout>
+
+            </control>
+
+            <!-- Full screen art -->
+            <control type="image">
+                <animation type="Conditional" condition="!Control.HasFocus(96)">
+                    <effect type="fade" start="100" end="0" time="200" />
+                </animation>
+                <left>0</left>
+                <top>0</top>
+                <width>3840</width>
+                <height>2160</height>
+                <fadetime>400</fadetime>
+                <aspectratio scalediffuse="true">scale</aspectratio>
+                <texture background="true">$VAR[BackgroundImageWithoutFallback]</texture>
+            </control>
+        </control>
+    </include>
+
+</includes>

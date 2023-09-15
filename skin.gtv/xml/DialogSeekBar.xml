@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <visible>Player.Seeking | Player.DisplayAfterSeek | [Player.Paused + !Player.Caching] | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(fullscreeninfo) | Player.ShowTime | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(playerprocessinfo) | !String.IsEmpty(Player.SeekNumeric) | !String.IsEmpty(PVR.ChannelNumberInput)</visible>
+    <visible>Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)</visible>
+    <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(osdsubtitlesettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(osdvideosettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(playerprocessinfo)]</visible>
+
+    <controls>
+        <control type="image">
+            <left>0</left>
+            <width>100%</width>
+            <bottom>0</bottom>
+            <height>500</height>
+            <texture background="true" colordiffuse="a0000000">masks/SeekbarGradient.png</texture>
+        </control>
+
+        <control type="group">
+            <animation effect="slide" start="0,0" end="0,-100" time="100" condition="Window.IsActive(VideoOSD.xml)">Conditional</animation>
+
+            <control type="progress">
+                <left>300</left>
+                <bottom>200</bottom>
+                <right>300</right>
+                <height>24</height>
+                <reveal>false</reveal>
+                <texturebg colordiffuse="80ffffff" border="12">progress/back24.png</texturebg>
+                <midtexture colordiffuse="TextBright" border="12">progress/slider24.png</midtexture>
+                <info>Player.Progress</info>
+            </control>
+
+            <control type="label">
+                <right>300</right>
+                <bottom>100</bottom>
+                <height>80</height>
+                <width>200</width>
+                <align>right</align>
+                <font>WidgetTitle</font>
+                <label>$VAR[PlayDurationVar]</label>
+            </control>
+
+            <control type="group">
+                <left>224</left>
+                <include>PlayerProgressAnimation</include>
+                <control type="label">
+                    <left>0</left>
+                    <bottom>100</bottom>
+                    <height>80</height>
+                    <width>200</width>
+                    <align>center</align>
+                    <font>WidgetTitle</font>
+                    <label>$VAR[PlayTimeVar]</label>
+                </control>
+            </control>
+        </control>
+
+    </controls>
+</window>
