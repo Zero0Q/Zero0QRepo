@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="repository.zero0q" name="Zer0QRepo" version="0.0.1" provider-name="Zero0Q">
-    <extension point="xbmc.addon.repository" name="Zero0QRepo">
+<addon id="repository.zer0q" name="Zer0QRepo" version="0.0.1" provider-name="Zer0Q">
+    <extension point="xbmc.addon.repository" name="Zer0QRepo">
         <dir>
-            <info compressed="false">https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/zips/</datadir>
+            <info compressed="false">https://raw.githubusercontent.com/Zer0Q/Zer0QRepo/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/Zer0Q/Zer0QRepo/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/Zer0Q/Zer0QRepo/master/zips/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary>Zero0QRepo</summary>
+        <summary>Zer0QRepo</summary>
         <description>My first repo...</description>
         <disclaimer></disclaimer>
         <platform>all</platform>
