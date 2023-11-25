@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.zero0qrepo" name="Zero0QRepo" version="0.0.3" provider-name="Zero0Q">
+<addon id="repository.zero0qrepo" name="Zero0QRepo" version="0.0.4" provider-name="Zero0Q">
     <extension point="xbmc.addon.repository" name="Zero0QRepo">
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/addons.xml</info>
