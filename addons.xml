@@ -110,7 +110,7 @@
 	</extension>
 </addon>
 
-<addon id="skin.gtv" version="0.1.7~alpha" name="GTV" provider-name="Zero0Q">
+<addon id="skin.gtv" version="0.1.8" name="GTV" provider-name="Zero0Q">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" />
