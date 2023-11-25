@@ -1,6 +1,25 @@
 <?xml version='1.0' encoding='UTF-8'?>
+<addons><addon id="repository.zero0qrepo" name="Zero0QRepo" version="0.0.3" provider-name="Zero0Q">
+    <extension point="xbmc.addon.repository" name="Zero0QRepo">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Zero0QRepo</summary>
+        <description>My first repo...</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.jpg</icon>
+        </assets>
+    </extension>
+
 <addons><addon id="script.fentastic.helper.zero0q" name="FENtastic Helper Zero0Q" version="0.6.19q" provider-name="Tikipeter, Ivar Brandt, Zero0Q">
     <requires>
+
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.19.1"/>
     </requires>
@@ -23,6 +42,7 @@
 
 </addon><addon id="script.gtv.helper" name="GTV Helper" version="0.0.3" provider-name="roidy">
     <requires>
+
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.pil" version="1.1.7" />
     </requires>
@@ -36,6 +56,7 @@
 
 </addon><addon id="skin.fentastic" version="1.0.22q" name="FENtastic" provider-name="Ivar Brandt, Zero0Q">
 	<requires>
+
 		<import addon="xbmc.gui" version="5.16.0" />
 		<import addon="script.fentastic.helper.zero0q" />
 	</requires>
@@ -71,6 +92,7 @@
 
 </addon><addon id="skin.gtv" version="0.1.8" name="GTV" provider-name="Zero0Q">
     <requires>
+
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" />
         <import addon="script.skinvariables" />
