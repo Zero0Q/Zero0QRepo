@@ -31,7 +31,7 @@
         <platform>all</platform>
     </extension>
 
-</addon><addon id="skin.gtv" version="0.1.8" name="GTV" provider-name="Zero0Q">
+</addon><addon id="skin.gtv" version="0.1.9" name="GTV" provider-name="Zero0Q">
     <requires>
 
         <import addon="xbmc.gui" version="5.15.0" />
