@@ -34,7 +34,7 @@
 </addon><addon id="skin.gtv" version="0.1.9" name="GTV" provider-name="Zero0Q">
     <requires>
 
-        <import addon="xbmc.gui" version="5.15.0" />
+        <import addon="xbmc.gui" version="5.17.0" />
         <import addon="script.skinshortcuts" />
         <import addon="script.skinvariables" />
         <import addon="script.embuary.helper" version="1.0.0" />
