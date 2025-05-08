@@ -33,34 +33,34 @@
         <label>$LOCALIZE[31607]</label>
         <label2 />
         <icon>special://skin/media/tmdb.png</icon>
-        <action>RunScript(script.gtv.helper,action=tmdb,type=tv,category=trending)</action>
+        <action>ActivateWindow(Videos,plugin://script.gtv.helper/?action=tmdb&type=tv&category=trending,return)</action>
     </shortcut>
     <shortcut>
         <defaultID>31608</defaultID>
         <label>$LOCALIZE[31608]</label>
         <label2 />
         <icon>special://skin/media/tmdb.png</icon>
-        <action>RunScript(script.gtv.helper,action=tmdb,type=tv,category=popular)</action>
+        <action>ActivateWindow(Videos,plugin://script.gtv.helper/?action=tmdb&type=tv&category=popular,return)</action>
     </shortcut>
     <shortcut>
         <defaultID>31609</defaultID>
         <label>$LOCALIZE[31609]</label>
         <label2 />
         <icon>special://skin/media/tmdb.png</icon>
-        <action>RunScript(script.gtv.helper,action=tmdb,type=tv,category=top_rated)</action>
+        <action>ActivateWindow(Videos,plugin://script.gtv.helper/?action=tmdb&type=tv&category=top_rated,return)</action>
     </shortcut>
     <shortcut>
         <defaultID>31610</defaultID>
         <label>$LOCALIZE[31610]</label>
         <label2 />
         <icon>special://skin/media/tmdb.png</icon>
-        <action>RunScript(script.gtv.helper,action=tmdb,type=tv,category=on_the_air)</action>
+        <action>ActivateWindow(Videos,plugin://script.gtv.helper/?action=tmdb&type=tv&category=on_the_air,return)</action>
     </shortcut>
     <shortcut>
         <defaultID>31611</defaultID>
         <label>$LOCALIZE[31611]</label>
         <label2 />
         <icon>special://skin/media/tmdb.png</icon>
-        <action>RunScript(script.gtv.helper,action=tmdb,type=tv,category=airing_today)</action>
+        <action>ActivateWindow(Videos,plugin://script.gtv.helper/?action=tmdb&type=tv&category=airing_today,return)</action>
     </shortcut>
 </shortcuts>

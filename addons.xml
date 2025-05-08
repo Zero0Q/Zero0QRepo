@@ -1,52 +1,50 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="repository.zero0qrepo" name="Zero0QRepo" version="0.0.4" provider-name="Zero0Q">
-    <extension point="xbmc.addon.repository" name="Zero0QRepo">
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/</datadir>
-        </dir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Zero0QRepo</summary>
-        <description>My first repo...</description>
-        <disclaimer></disclaimer>
-        <platform>all</platform>
-        <assets>
-            <icon>icon.jpg</icon>
-        </assets>
-    </extension>
+<addons>
+    <addon id="repository.zero0qrepo" name="Zero0Q Repository" version="0.0.4" provider-name="Zero0Q">
+        <extension point="xbmc.addon.repository" name="Zero0Q Repository">
+            <dir>
+                <info>https://zero0q.github.io/Zero0QRepo/addons.xml</info>
+                <checksum>https://zero0q.github.io/Zero0QRepo/addons.xml.md5</checksum>
+                <datadir>https://zero0q.github.io/Zero0QRepo/</datadir>
+            </dir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Zero0Q Repository</summary>
+            <description>Repository for GTV Skin and Helper addons</description>
+            <platform>all</platform>
+        </extension>
+    </addon>
 
-</addon><addon id="script.gtv.helper" name="GTV Helper" version="0.0.3" provider-name="roidy">
-    <requires>
+    <addon id="script.gtv.helper" name="GTV Helper" version="0.0.3" provider-name="Zero0Q">
+        <requires>
+            <import addon="xbmc.python" version="3.0.0"/>
+            <import addon="script.module.requests" version="2.22.0"/>
+        </requires>
+        <extension point="xbmc.python.script" library="default.py">
+            <provides>executable</provides>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary lang="en_GB">Helper script for GTV skin with TMDB integration</summary>
+            <description lang="en_GB">Provides TMDB API integration and additional functionality for the GTV skin</description>
+            <platform>all</platform>
+            <license>GPL-2.0-or-later</license>
+        </extension>
+    </addon>
 
-        <import addon="xbmc.python" version="3.0.0" />
-        <import addon="script.module.pil" version="1.1.7" />
-    </requires>
-
-    <extension point="xbmc.service" library="service.py" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">GTV helper</summary>
-        <description lang="en_GB">Helper script for GTV skin</description>
-        <platform>all</platform>
-    </extension>
-
-</addon><addon id="skin.gtv" version="0.2.0" name="GTV" provider-name="Zero0Q">
-    <requires>
-
-        <import addon="xbmc.gui" version="5.17.0" />
-        <import addon="script.skinshortcuts" />
-        <import addon="script.skinvariables" />
-        <import addon="script.embuary.helper" version="1.0.0" />
-        <import addon="script.embuary.info" version="1.0.0" />
-        <import addon="script.gtv.helper" />
-        <import addon="resource.images.languageflags.completepack" />
-    </requires>
-    <extension point="xbmc.gui.skin" debugging="false" effectslowdown="0.75">
-        <res width="3840" height="2160" aspect="16:9" default="true" folder="xml" />
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">Zero0Q</summary>
-        <platform>all</platform>
-    </extension>
-</addon></addons>
+    <addon id="skin.gtv" name="GTV" version="0.2.1" provider-name="Zero0Q">
+        <requires>
+            <import addon="xbmc.gui" version="5.15.0"/>
+            <import addon="script.skinshortcuts" version="1.1.5"/>
+            <import addon="script.gtv.helper" version="0.0.3"/>
+        </requires>
+        <extension point="xbmc.gui.skin" debugging="false" effectslowdown="0.75">
+            <res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary lang="en_GB">A modern Kodi skin inspired by Google TV's interface</summary>
+            <description lang="en_GB">GTV is a skin that brings the Google TV experience to Kodi</description>
+            <platform>all</platform>
+            <license>CC-BY-NC-SA-4.0</license>
+        </extension>
+    </addon>
+</addons>
