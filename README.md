@@ -2,24 +2,23 @@
 
 A Kodi repository featuring the GTV skin and helper addons for a Google TV-like experience.
 
-## Quick Installation
+## Installation Instructions
 
-### Method 1: Direct Install
-1. In Kodi, go to Settings → File Manager
-2. Click "Add source"
-3. For the source path, enter: `https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master`
-4. Give it a name (e.g. "Zero0QRepo") and click OK
-5. Go back to the home screen
-6. Go to Add-ons
-7. Click the package installer icon (top left)
-8. Choose "Install from zip file"
-9. Select "Zero0QRepo" and then select `repository.zero0qrepo/repository.zero0qrepo-0.0.4.zip`
+### Method 1: Manual Installation
+1. Download [repository.zero0qrepo-0.0.4.zip](https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/repository.zero0qrepo/repository.zero0qrepo-0.0.4.zip) directly
+2. In Kodi, go to Settings → Add-ons
+3. Click the package installer icon (top left)
+4. Select "Install from zip file"
+5. Navigate to where you downloaded the zip file and select it
+6. Wait for the "Zero0Q Repository Installed" notification
 
-### Method 2: One-Click Install
-Copy this URL into a text file and save with `.strm` extension, then open in Kodi:
+### Method 2: Quick Install
+1. Create a new text file with this URL:
 ```
-plugin://repository.zero0qrepo/?install=true&url=https%3A%2F%2Fraw.githubusercontent.com%2FZero0Q%2FZero0QRepo%2Fmaster%2Frepository.zero0qrepo%2Frepository.zero0qrepo-0.0.4.zip
+plugin://repository.zero0qrepo?action=install&package=https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/repository.zero0qrepo/repository.zero0qrepo-0.0.4.zip
 ```
+2. Save the file with `.strm` extension (e.g., `install-repo.strm`)
+3. Open the `.strm` file in Kodi
 
 ## Available Add-ons
 
