@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repository.zero0qrepo" name="Zero0Q Repository" version="0.0.4" provider-name="Zero0Q">
     <extension point="xbmc.addon.repository" name="Zero0Q Repository">
-        <dir>
-            <info>https://zero0q.github.io/Zero0QRepo/addons.xml</info>
-            <checksum>https://zero0q.github.io/Zero0QRepo/addons.xml.md5</checksum>
-            <datadir>https://zero0q.github.io/Zero0QRepo/</datadir>
-        </dir>
+        <info>https://zero0q.github.io/Zero0QRepo/addons.xml</info>
+        <checksum>https://zero0q.github.io/Zero0QRepo/addons.xml.md5</checksum>
+        <datadir>https://zero0q.github.io/Zero0QRepo</datadir>
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary>Zero0Q Repository</summary>
         <description>Repository for GTV Skin and Helper addons</description>
-        <disclaimer></disclaimer>
         <platform>all</platform>
         <assets>
             <icon>icon.png</icon>
