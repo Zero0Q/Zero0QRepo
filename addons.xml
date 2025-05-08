@@ -2,9 +2,9 @@
 <addons>
     <addon id="repository.zero0qrepo" name="Zero0Q Repository" version="0.0.4" provider-name="Zero0Q">
         <extension point="xbmc.addon.repository" name="Zero0Q Repository">
-            <info>https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/gh-pages/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/gh-pages/addons.xml.md5</checksum>
-            <datadir>https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/gh-pages</datadir>
+            <info>https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/addons.xml.md5</checksum>
+            <datadir>https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master</datadir>
         </extension>
         <extension point="xbmc.addon.metadata">
             <summary>Zero0Q Repository</summary>
