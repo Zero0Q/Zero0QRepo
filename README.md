@@ -18,7 +18,7 @@ A Kodi repository featuring the GTV skin and helper addons for a Google TV-like 
 ### Method 2: One-Click Install
 Copy this URL into a text file and save with `.strm` extension, then open in Kodi:
 ```
-plugin://repository.zero0qrepo?install=true&url=https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/repository.zero0qrepo/repository.zero0qrepo-0.0.4.zip
+plugin://repository.zero0qrepo/?install=true&url=https%3A%2F%2Fraw.githubusercontent.com%2FZero0Q%2FZero0QRepo%2Fmaster%2Frepository.zero0qrepo%2Frepository.zero0qrepo-0.0.4.zip
 ```
 
 ## Available Add-ons
