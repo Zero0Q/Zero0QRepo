@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<includes>
+
+    <include name="MainMenu">
+
+        <control type="group">
+            <left>0</left>
+            <top>0</top>
+
+            <!-- Search Button -->
+            <control type="button" id="8999">
+                <left>40</left>
+                <top>30</top>
+                <width>60</width>
+                <height>60</height>
+                <font>IconSmall</font>
+                <label></label>
+                <onclick>RunScript(script.globalsearch)</onclick>
+                <texturefocus colordiffuse="TextSelected">general/search.png</texturefocus>
+                <texturenofocus colordiffuse="TextNormal">general/search.png</texturenofocus>
+                <ondown>9000</ondown>
+            </control>
+
+            <!-- Main Menu Tabs -->
+            <control type="list" id="9000">
+                <left>120</left>
+                <width>2500</width>
+                <top>30</top>
+                <height>60</height>
+                <orientation>horizontal</orientation>
+                <onleft>8999</onleft>
+                <onright>9010</onright>
+                <itemlayout width="300" height="60">
+                    <control type="label">
+                        <width>300</width>
+                        <height>60</height>
+                        <font>MainMenuFont</font>
+                        <textcolor>TextNormal</textcolor>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="300" height="60">
+                    <control type="group">
+                        <control type="image">
+                            <width>300</width>
+                            <height>4</height>
+                            <bottom>0</bottom>
+                            <texture colordiffuse="AccentColor">white.png</texture>
+                            <visible>Control.HasFocus(9000)</visible>
+                        </control>
+                        <control type="label">
+                            <width>300</width>
+                            <height>60</height>
+                            <font>MainMenuFont</font>
+                            <textcolor>TextSelected</textcolor>
+                            <align>center</align>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <include>skinshortcuts-mainmenu</include>
+                </content>
+            </control>
+
+            <!-- Profile & Time -->
+            <control type="group" id="9010">
+                <right>40</right>
+                <top>30</top>
+                <width>300</width>
+                <height>60</height>
+                
+                <control type="image">
+                    <right>0</right>
+                    <width>60</width>
+                    <height>60</height>
+                    <texture>DefaultUser.png</texture>
+                </control>
+                
+                <control type="label">
+                    <right>80</right>
+                    <width>200</width>
+                    <height>60</height>
+                    <align>right</align>
+                    <font>MainMenuFont</font>
+                    <textcolor>TextNormal</textcolor>
+                    <label>$INFO[System.Time]</label>
+                </control>
+            </control>
+        </control>
+
+    </include>
+
+</includes>

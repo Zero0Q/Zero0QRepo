@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<window>
+    <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;options=noGroups)</onload>
+    <onload>RunScript(script.skinvariables,action=buildviews)</onload>
+    <defaultcontrol>9000</defaultcontrol>
+
+    <controls>
+
+        <include>ColorGrabImage</include>
+        <include>DarkGreyBackground</include>
+
+        <!-- Background Dim -->
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>3840</width>
+            <height>2160</height>
+            <fadetime>400</fadetime>
+            <texture background="true" colordiffuse="$VAR[BlurColorBackgroundVar]">masks/background-fallback.png</texture>
+        </control>
+
+        <!-- Top Navigation -->
+        <include>MainMenu</include>
+
+        <!-- Content Discovery Rows -->
+        <control type="grouplist" id="9001">
+            <left>40</left>
+            <top>120</top>
+            <width>3760</width>
+            <height>1920</height>
+            <itemgap>40</itemgap>
+            <orientation>vertical</orientation>
+            <usecontrolcoords>true</usecontrolcoords>
+            <visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),foryou)</visible>
+
+            <!-- Continue Watching -->
+            <control type="group">
+                <height>400</height>
+                <control type="label">
+                    <height>60</height>
+                    <font>MainLabelBig</font>
+                    <textcolor>TextSelected</textcolor>
+                    <label>Continue Watching</label>
+                </control>
+                <control type="wraplist" id="9101">
+                    <top>80</top>
+                    <height>320</height>
+                    <orientation>horizontal</orientation>
+                    <itemlayout width="560" height="320">
+                        <control type="group">
+                            <control type="image">
+                                <width>520</width>
+                                <height>293</height>
+                                <texture diffuse="masks/Mask782x440r16.png">$INFO[ListItem.Art(landscape)]</texture>
+                            </control>
+                            <control type="progress">
+                                <bottom>20</bottom>
+                                <width>520</width>
+                                <height>4</height>
+                                <info>ListItem.PercentPlayed</info>
+                                <texturebg colordiffuse="44FFFFFF">white.png</texturebg>
+                                <midtexture colordiffuse="FF4285F4">white.png</midtexture>
+                            </control>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="560" height="320">
+                        <control type="group">
+                            <animation effect="zoom" start="100" end="105" center="auto" time="200">Focus</animation>
+                            <control type="image">
+                                <width>520</width>
+                                <height>293</height>
+                                <texture diffuse="masks/Mask782x440r16.png">$INFO[ListItem.Art(landscape)]</texture>
+                            </control>
+                            <control type="progress">
+                                <bottom>20</bottom>
+                                <width>520</width>
+                                <height>4</height>
+                                <info>ListItem.PercentPlayed</info>
+                                <texturebg colordiffuse="44FFFFFF">white.png</texturebg>
+                                <midtexture colordiffuse="FF4285F4">white.png</midtexture>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                    <content>special://skin/extras/playlists/continue_watching.xsp</content>
+                </control>
+            </control>
+
+            <!-- Top Picks For You -->
+            <control type="group">
+                <height>400</height>
+                <control type="label">
+                    <height>60</height>
+                    <font>MainLabelBig</font>
+                    <textcolor>TextSelected</textcolor>
+                    <label>Top Picks For You</label>
+                </control>
+                <control type="wraplist" id="9102">
+                    <top>80</top>
+                    <height>320</height>
+                    <orientation>horizontal</orientation>
+                    <itemlayout width="560" height="320">
+                        <control type="group">
+                            <control type="image">
+                                <width>520</width>
+                                <height>293</height>
+                                <texture diffuse="masks/Mask782x440r16.png">$INFO[ListItem.Art(landscape)]</texture>
+                            </control>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="560" height="320">
+                        <control type="group">
+                            <animation effect="zoom" start="100" end="105" center="auto" time="200">Focus</animation>
+                            <control type="image">
+                                <width>520</width>
+                                <height>293</height>
+                                <texture diffuse="masks/Mask782x440r16.png">$INFO[ListItem.Art(landscape)]</texture>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                    <content>plugin://plugin.video.themoviedb.helper?info=discover&amp;type=movie&amp;sort_by=popularity.desc</content>
+                </control>
+            </control>
+
+            <!-- Trending Now -->
+            <control type="group">
+                <height>400</height>
+                <control type="label">
+                    <height>60</height>
+                    <font>MainLabelBig</font>
+                    <textcolor>TextSelected</textcolor>
+                    <label>Trending Now</label>
+                </control>
+                <control type="wraplist" id="9103">
+                    <top>80</top>
+                    <height>320</height>
+                    <orientation>horizontal</orientation>
+                    <itemlayout width="560" height="320">
+                        <control type="group">
+                            <control type="image">
+                                <width>520</width>
+                                <height>293</height>
+                                <texture diffuse="masks/Mask782x440r16.png">$INFO[ListItem.Art(landscape)]</texture>
+                            </control>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="560" height="320">
+                        <control type="group">
+                            <animation effect="zoom" start="100" end="105" center="auto" time="200">Focus</animation>
+                            <control type="image">
+                                <width>520</width>
+                                <height>293</height>
+                                <texture diffuse="masks/Mask782x440r16.png">$INFO[ListItem.Art(landscape)]</texture>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                    <content>plugin://plugin.video.themoviedb.helper?info=trending_movies</content>
+                </control>
+            </control>
+        </control>
+
+        <!-- Additional Widget Rows -->
+        <include>skinshortcuts-template-widgets</include>
+
+        <!--Time-->
+        <control type="label">
+            <right>30</right>
+            <posy>10</posy>
+            <width>600</width>
+            <height>100</height>
+            <align>right</align>
+            <info>System.Time()</info>
+            <font>SelectDialogItemText</font>
+            <textcolor>white</textcolor>
+        </control>
+
+        <!--Date-->
+        <control type="label">
+            <right>40</right>
+            <align>right</align>
+            <posy>120</posy>
+            <width>950</width>
+            <height>50</height>
+            <info>System.Date()</info>
+            <font>SelectDialogItemText</font>
+            <textcolor>white</textcolor>
+        </control>
+    </controls>
+</window>

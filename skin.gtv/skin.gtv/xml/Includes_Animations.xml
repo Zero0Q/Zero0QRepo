@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <include name="SubMenuCenter">
+        <animation effect="slide" start="0,0" end="1680,0" time="0" condition="Integer.IsLess(Container(9001).NumItems,2)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="1440,0" time="0" condition="Integer.IsEqual(Container(9001).NumItems,2)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="1200,0" time="0" condition="Integer.IsEqual(Container(9001).NumItems,3)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="960,0" time="0" condition="Integer.IsEqual(Container(9001).NumItems,4)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="740,0" time="0" condition="Integer.IsEqual(Container(9001).NumItems,5)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="500,0" time="0" condition="Integer.IsEqual(Container(9001).NumItems,6)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="260,0" time="0" condition="Integer.IsEqual(Container(9001).NumItems,7)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsEqual(Container(9001).NumItems,8)">Conditional</animation>
+    </include>
+
+    <include name="SeasonCenterHorizontal">
+        <animation effect="slide" start="0,0" end="1646,0" time="0" condition="Integer.IsLess(Container(540).NumItems,2)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="1372,0" time="0" condition="Integer.IsEqual(Container(540).NumItems,2)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="1098,0" time="0" condition="Integer.IsEqual(Container(540).NumItems,3)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="824,0" time="0" condition="Integer.IsEqual(Container(540).NumItems,4)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="550,0" time="0" condition="Integer.IsEqual(Container(540).NumItems,5)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="276,0" time="0" condition="Integer.IsEqual(Container(540).NumItems,6)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsEqual(Container(540).NumItems,7)">Conditional</animation>
+    </include>
+
+    <include name="ViewSelectCenter">
+        <animation effect="slide" start="0,0" end="0,180" time="0" condition="Integer.IsLess(Container(3).NumItems,2)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,120" time="0" condition="Integer.IsEqual(Container(3).NumItems,2)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,60" time="0" condition="Integer.IsEqual(Container(3).NumItems,3)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsEqual(Container(3).NumItems,4)">Conditional</animation>
+    </include>
+
+    <include name="MenuChangeAnimation">
+        <animation type="Conditional" reversible="false" tween="cubic" easing="out" condition="!Container(9000).OnNext">
+            <effect type="slide" start="400,0" end="0,0" time="300" delay="0" />
+            <effect type="fade" start="0" end="100" time="200" delay="0" />
+        </animation>
+        <animation type="Conditional" reversible="false" tween="cubic" easing="out" condition="!Container(9000).OnPrevious">
+            <effect type="slide" start="-400,0" end="0,0" time="300" delay="0" />
+            <effect type="fade" start="0" end="100" time="200" delay="0" />
+        </animation>
+    </include>
+
+    <include name="ContentChangeAnimation">
+        <animation type="Visible" reversible="false" tween="cubic" easing="out" condition="!Container(9000).OnNext">
+            <effect type="slide" start="-400,0" end="0,0" time="300" delay="0" />
+            <effect type="fade" start="0" end="100" time="200" delay="50" />
+        </animation>
+        <animation type="Visible" reversible="false" tween="cubic" easing="out" condition="!Container(9000).OnPrevious">
+            <effect type="slide" start="400,0" end="0,0" time="300" delay="0" />
+            <effect type="fade" start="0" end="100" time="200" delay="50" />
+        </animation>
+    </include>
+
+    <include name="ButtonZoom">
+        <animation type="Focus" reversible="false">
+            <effect type="zoom" end="101,106" time="50" tween="sine" center="auto" />
+            <effect type="zoom" end="99,94.35" time="100" tween="sine" delay="75" center="auto" />
+        </animation>
+    </include>
+
+    <include name="InfoButtonZoom">
+        <animation type="Focus" reversible="false">
+            <effect type="zoom" end="108,114" time="50" tween="sine" center="auto" />
+        </animation>
+    </include>
+
+    <include name="CenterContext">
+        <animation effect="slide" start="0,0" end="0,1020" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,1)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,956" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,2)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,892" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,3)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,828" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,4)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,764" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,5)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,700" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,6)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,636" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,7)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,572" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,8)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,508" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,9)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,444" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,10)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,380" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,11)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,380" time="0" condition="Integer.IsGreater(Container($PARAM[id]).NumItems,11)">Conditional</animation>
+    </include>
+
+    <include name="PlayerProgressAnimation">
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,1)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,2)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,3)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,4)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,5)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,6)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,7)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,8)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,9)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,10)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,11)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,12)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,13)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,14)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,15)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,16)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,17)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,18)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,19)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,20)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,21)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,22)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,23)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,24)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,25)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,26)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,27)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,28)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,29)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,30)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,31)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,33)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,33)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,34)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,35)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,36)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,37)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,38)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,39)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,40)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,41)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,42)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,43)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,44)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,45)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,46)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,47)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,48)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,49)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,50)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,51)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,52)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,53)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,54)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,55)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,56)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,57)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,58)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,59)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,60)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,61)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,62)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,63)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,64)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,65)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,66)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,67)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,68)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,69)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,70)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,71)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,72)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,73)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,74)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,75)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,76)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,77)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,78)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,79)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,80)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,81)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,82)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,83)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,84)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,85)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,86)" reversible="false">Conditonal</animation>
+        <animation effect="slide" start="0" end="32.5" time="1" condition="Integer.IsGreater(Player.Progress,87)" reversible="false">Conditonal</animation>
+    </include>
+
+</includes>

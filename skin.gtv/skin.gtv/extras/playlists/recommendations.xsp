@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="mixed">
+    <name>Recommended For You</name>
+    <match>one</match>
+    <rule field="rating" operator="greaterthan">7</rule>
+    <rule field="playcount" operator="is">0</rule>
+    <rule field="genre" operator="contains">$INFO[Container(9000).ListItem.Property(GTV.Genre)]</rule>
+    <order direction="descending">rating</order>
+    <limit>15</limit>
+    <group>mixed</group>
+</smartplaylist>

@@ -1,0 +1,240 @@
+{
+    "prefix": "Exp_View",
+    "viewtypes": {
+        "50": "List",
+        "500": "Landscape Flow",
+        "501": "Poster Flow",
+        "502": "Poster Grid",
+        "503": "Landscape Grid",
+        "520": "Square Grid",
+        "530": "Category",
+        "540": "Episode Flow Horizontal"
+    },
+    "rules": {
+        "addons": {
+            "rule": "Container.Content(addons)",
+            "viewtypes": ["50", "520"],
+            "library": "50",
+            "plugins": "50"
+        },
+        "albums": {
+            "rule": "Container.Content(albums)",
+            "viewtypes": ["50", "520"],
+            "library": "520"
+        },
+        "images": {
+            "rule": "Container.Content(images)",
+            "viewtypes": ["50", "503"],
+            "library": "503"
+        },
+        "actors": {
+            "rule": "Container.Content(actors)",
+            "viewtypes": ["50", "502", "530"],
+            "library": "530"
+        },
+        "seasons": {
+            "rule": "Container.Content(seasons)",
+            "viewtypes": ["500", "501", "540"], 
+            "library": "501"
+        },
+        "tags": {
+            "rule": "Container.Content(tags)",
+            "viewtypes": ["50", "502", "530"],
+            "library": "530"
+        },
+        "countries": {
+            "rule": "Container.Content(countries)",
+            "library": "530"
+        },
+        "genres": {
+            "rule": "Container.Content(genres) + !Window.IsVisible(MyMusicNav.xml)",
+            "library": "530"
+        },        
+        "genres-music": {
+            "rule": "Container.Content(genres) + Window.IsVisible(MyMusicNav.xml)",
+            "viewtypes": ["50", "520"],
+            "library": "520"
+        },
+        "studios": {
+            "rule": "Container.Content(studios)",
+            "library": "530"
+        },
+        "years": {
+            "rule": "Container.Content(years)",
+            "library": "530"
+        },
+        "years-music": {
+            "rule": "Container.Content(years) + Window.IsVisible(MyMusicNav.xml)",
+            "viewtypes": ["50", "520"],
+            "library": "520"
+        },
+        "directors": {
+            "rule": "Container.Content(directors)",
+            "library": "50"
+        },
+        "artists": {
+            "rule": "Container.Content(artists)",
+            "viewtypes": ["50", "520"],
+            "library": "520"
+        },
+        "videos": {
+            "rule": "Container.Content(videos)",
+            "viewtypes": ["50", "503"],
+            "library": "50",
+            "plugins": "50"
+        },
+        "sets": {
+            "rule": "Container.Content(sets)",
+            "viewtypes": ["500", "501"],
+            "library": "500"
+        },
+        "movies": {
+            "rule": "Container.Content(movies)",
+            "viewtypes": ["500", "501"],
+            "library": "500"
+        },
+        "tvshows": {
+            "rule": "Container.Content(tvshows)",
+            "viewtypes": ["500", "501"],
+            "library": "500"
+        },
+        "episodes": {
+            "rule": "Container.Content(episodes)",
+            "viewtypes": ["50", "500"],
+            "library": "50",
+            "plugins": "50"
+        },
+        "songs": {
+            "rule": "Container.Content(songs)",
+            "library": "50",
+            "plugins": "50"
+        },
+        "files": {
+            "rule": "Container.Content(files)",
+            "viewtypes": ["50", "503"],
+            "library": "50",
+            "plugins": "50"
+        },
+        "playlists": {
+            "rule": "Container.Content(playlists)",
+            "library": "50"
+        },
+        "none": {
+            "rule" : "Container.Content()",
+            "library": "50"
+        }
+    },
+    "widgetdefaults": {
+        "foryou": {
+            "widgets": [
+                {
+                    "id": "trending_movies",
+                    "type": "plugin",
+                    "path": "plugin://plugin.video.themoviedb.helper?info=discover&type=movie&sort_by=popularity.desc",
+                    "target": "videos",
+                    "label": "Trending Movies"
+                },
+                {
+                    "id": "trending_shows",
+                    "type": "plugin",
+                    "path": "plugin://plugin.video.themoviedb.helper?info=discover&type=tv&sort_by=popularity.desc",
+                    "target": "videos",
+                    "label": "Trending Shows"
+                },
+                {
+                    "id": "continue_watching",
+                    "type": "playlist",
+                    "path": "special://skin/extras/playlists/inprogress_movies.xsp",
+                    "target": "videos",
+                    "label": "Continue Watching"
+                }
+            ]
+        },
+        "movies": {
+            "widgets": [
+                {
+                    "id": "popular_movies",
+                    "type": "plugin",
+                    "path": "plugin://plugin.video.themoviedb.helper?info=popular_movies",
+                    "target": "videos",
+                    "label": "Popular Movies"
+                },
+                {
+                    "id": "top_rated_movies",
+                    "type": "plugin",
+                    "path": "plugin://plugin.video.themoviedb.helper?info=top_rated_movies",
+                    "target": "videos",
+                    "label": "Top Rated"
+                },
+                {
+                    "id": "upcoming_movies",
+                    "type": "plugin",
+                    "path": "plugin://plugin.video.themoviedb.helper?info=upcoming_movies",
+                    "target": "videos",
+                    "label": "Coming Soon"
+                }
+            ]
+        },
+        "tvshows": {
+            "widgets": [
+                {
+                    "id": "popular_shows",
+                    "type": "plugin",
+                    "path": "plugin://plugin.video.themoviedb.helper?info=popular_tv",
+                    "target": "videos",
+                    "label": "Popular Shows"
+                },
+                {
+                    "id": "airing_today",
+                    "type": "plugin",
+                    "path": "plugin://plugin.video.themoviedb.helper?info=airing_today_tv",
+                    "target": "videos",
+                    "label": "Airing Today"
+                },
+                {
+                    "id": "on_the_air",
+                    "type": "plugin",
+                    "path": "plugin://plugin.video.themoviedb.helper?info=on_the_air_tv",
+                    "target": "videos",
+                    "label": "On TV"
+                }
+            ]
+        },
+        "apps": {
+            "widgets": [
+                {
+                    "id": "video_addons",
+                    "type": "addon",
+                    "path": "addons://sources/video",
+                    "target": "videos",
+                    "label": "Video Add-ons"
+                },
+                {
+                    "id": "recently_updated",
+                    "type": "addon",
+                    "path": "addons://recently_updated",
+                    "target": "addons",
+                    "label": "Recently Updated"
+                }
+            ]
+        },
+        "library": {
+            "widgets": [
+                {
+                    "id": "recent_movies",
+                    "type": "movies",
+                    "path": "videodb://recentlyaddedmovies",
+                    "target": "videos",
+                    "label": "Recently Added Movies"
+                },
+                {
+                    "id": "recent_episodes",
+                    "type": "episodes",
+                    "path": "videodb://recentlyaddedepisodes",
+                    "target": "videos",
+                    "label": "Recently Added Episodes"
+                }
+            ]
+        }
+    }
+}

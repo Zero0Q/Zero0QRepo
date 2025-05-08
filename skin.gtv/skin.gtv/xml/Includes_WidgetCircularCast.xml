@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- TODO: Fix hardcoded color values -->
+
+<includes>
+
+    <!-- ======================= Landscape small layout ======================== -->
+    <include name="CircularLayout">
+        <definition>
+            <control type="group">
+                <animation type="Focused" reversible="false">
+                    <effect type="zoom" end="100" time="75" tween="sine" center="286,286" />
+                </animation>
+
+                <control type="image">
+                    <visible>Control.HasFocus(51) + $PARAM[Focused]</visible>
+                    <!-- <fadetime>10</fadetime> -->
+                    <left>-108</left>
+                    <top>0</top>
+                    <width>800</width>
+                    <height>800</height>
+                    <texture background="true" colordiffuse="30ff6e00">masks/CircularBlurMask.png</texture>
+                </control>
+                <!-- Main landscape image -->
+                <control type="group">
+                    <animation type="conditional" condition="$PARAM[Focused]" reversible="false">
+                        <effect type="zoom" end="112" time="75" tween="sine" center="286,286" />
+                    </animation>
+                    <control type="image">
+                        <left>36</left>
+                        <top>150</top>
+                        <width>500</width>
+                        <height>500</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="masks/MaskCircular500.png">$VAR[CastImageVar]</texture>
+                    </control>
+                    <control type="image">
+                        <visible>Control.HasFocus(51) + $PARAM[Focused]</visible>
+                        <left>30</left>
+                        <top>144</top>
+                        <width>512</width>
+                        <height>512</height>
+                        <texture background="true">masks/SelectorCircular512.png</texture>
+                        <animation effect="fade" start="100" end="20" time="1500" easing="inout" tween="cubic" pulse="true" condition="$PARAM[Focused]">Conditional</animation>
+                    </control>
+                </control>
+                <!-- Label group -->
+                <control type="group">
+                    <animation type="conditional" condition="$PARAM[Focused]" reversible="false">
+                        <effect type="slide" start="0,0" end="0,26" time="75" tween="sine" />
+                    </animation>
+                    <animation effect="Fade" start="100" end="50" time="50" condition="!$PARAM[Focused]">Conditional</animation>
+                    <animation effect="Fade" start="50" end="100" time="50" condition="$PARAM[Focused]">Conditional</animation>
+
+                    <control type="label">
+                        <left>36</left>
+                        <width>500</width>
+                        <top>680</top>
+                        <height>60</height>
+                        <align>center</align>
+                        <font>WidgetTitle</font>
+                        <textcolor>TextBright</textcolor>
+                        <label>$INFO[ListItem.label]</label>
+                    </control>
+                    <control type="label">
+                        <left>36</left>
+                        <width>500</width>
+                        <top>760</top>
+                        <height>60</height>
+                        <align>center</align>
+                        <font>WidgetTitle</font>
+                        <textcolor>TextBright</textcolor>
+                        <label>$INFO[ListItem.label2]</label>
+                    </control>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+
+    <include name="WidgetCircularCast">
+        <param name="WidgetLabel2" default="" />
+        <param name="Content2" default="" />
+        <param name="GroupHeight" default="1100" />
+        <definition>
+            <control type="group">
+                <visible>Integer.IsGreater(Container($PARAM[ListID]).NumItems,0) | Container($PARAM[ListID]).IsUpdating</visible>
+                <left>0</left>
+                <right>0</right>
+                <top>80</top>
+                <height>$PARAM[GroupHeight]</height>
+
+                <!-- Header group -->
+                <control type="group">
+                    <animation effect="Fade" start="100" end="70" time="100" condition="!Control.HasFocus(51)">Conditional</animation>
+                    <animation effect="Fade" start="70" end="100" time="100" condition="Control.HasFocus(51)">Conditional</animation>
+                    <animation effect="zoom" start="100" end="50" center="224,0" time="100" condition="!Control.HasFocus(51)">Conditional</animation>
+                    <!-- Widget header label -->
+                    <control type="label">
+                        <left>224</left>
+                        <top>-280</top>
+                        <width>3000</width>
+                        <height>60</height>
+                        <aligny>top</aligny>
+                        <font>WidgetLabelInfo</font>
+                        <textcolor>TextBright</textcolor>
+                        <label>$PARAM[WidgetLabel]</label>
+                    </control>
+                </control>
+                <!-- Main widget list -->
+                <control type="fixedlist" id="$PARAM[ListID]">
+                    <top>-150</top>
+                    <left>0</left>
+                    <right>0</right>
+                    <height>$PARAM[GroupHeight]</height>
+                    <onup>$PARAM[OnUp]</onup>
+                    <ondown>$PARAM[OnDown]</ondown>
+                    <onback>$PARAM[OnBack]</onback>
+                    <onleft>$PARAM[OnLeft]</onleft>
+                    <onright>noop</onright>
+                    <pagecontrol>60</pagecontrol>
+                    <preloaditems>2</preloaditems>
+                    <orientation>horizontal</orientation>
+                    <focusposition>0</focusposition>
+                    <movement>5</movement>
+
+                    <itemlayout width="572" height="740">
+                        <control type="group">
+                            <left>192</left>
+                            <include content="CircularLayout">
+                                <param name="LabelColor" value="TextDim" />
+                                <param name="Focused" value="false" />
+                                <param name="ListID" value="$PARAM[ListID]" />
+                            </include>
+                        </control>
+                    </itemlayout>
+
+                    <focusedlayout width="572" height="740">
+                        <control type="group">
+                            <visible>Control.HasFocus($PARAM[ListID])</visible>
+                            <left>192</left>
+                            <include content="CircularLayout">
+                                <param name="LabelColor" value="TextBright" />
+                                <param name="Focused" value="true" />
+                                <param name="ListID" value="$PARAM[ListID]" />
+                            </include>
+                        </control>
+                        <control type="group">
+                            <visible>!Control.HasFocus($PARAM[ListID])</visible>
+                            <left>192</left>
+                            <include content="CircularLayout">
+                                <param name="LabelColor" value="TextDim" />
+                                <param name="Focused" value="true" />
+                                <param name="ListID" value="$PARAM[ListID]" />
+                            </include>
+                        </control>
+                    </focusedlayout>
+
+                    <!-- <content target="$PARAM[ContentType]" sortby="$PARAM[SortBy]" sortorder="$PARAM[SortOrder]">$PARAM[Content]</content> -->
+                </control>
+            </control>
+        </definition>
+    </include>
+
+</includes>

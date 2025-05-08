@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window>
+    <defaultcontrol always="true">996</defaultcontrol>
+    <controls>
+        <control type="group">
+
+            <include>ColorGrabImage</include>
+            <include>ScreenFadeImage</include>
+
+            <control type="group">
+                <animation effect="fade" start="0" end="100" time="100">WindowOpen</animation>
+                <animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
+                <include content="CenterContext">
+                    <param name="id" value="996" />
+                </include>
+                <!-- Context menu header -->
+                <control type="label">
+                    <top>-180</top>
+                    <left>0</left>
+                    <width>3840</width>
+                    <height>140</height>
+                    <font>ContextTitle</font>
+                    <textcolor>TextBright</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>$VAR[ContextTitleVar]</label>
+                </control>
+                <!--Context menu main control list -->
+                <control type="grouplist" id="996">
+                    <description>grouplist for context buttons</description>
+                    <left>1404</left>
+                    <top>0</top>
+                    <width>1032</width>
+                    <height min="60" max="2160">auto</height>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>8</itemgap>
+                </control>
+                <!-- Context menu button template -->
+                <control type="button" id="1000">
+                    <width>1000</width>
+                    <include>Button120</include>
+                </control>
+            </control>
+
+        </control>
+    </controls>
+</window>

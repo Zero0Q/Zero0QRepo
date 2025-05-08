@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <include name="View_501_PosterFlow">
+        <control type="group">
+            <visible>Control.IsVisible(501)</visible>
+
+            <animation effect="slide" start="0,0" end="0,-150" time="200" condition="Control.HasFocus(60) | ControlGroup(9050).HasFocus">Conditional</animation>
+
+            <!-- Hidden list for sets -->
+            <control type="list" id="5501">
+                <visible>String.IsEqual(ListItem.dbtype,set)</visible>
+                <left>-1000</left>
+                <itemlayout />
+                <focusedlayout />
+                <content type="video">$INFO[ListItem.FolderPath]</content>
+            </control>
+
+            <!-- Hidden button for fullscreen art -->
+            <control type="button" id="96">
+                <left>-1000</left>
+                <ondown>501</ondown>
+                <onup>501</onup>
+            </control>
+
+            <!-- Include main info -->
+            <include content="MainInfoView">
+                <param name="ID" value="501" />
+            </include>
+
+            <control type="fixedlist" id="501">
+                <visible>$EXP[Exp_View_501]</visible>
+
+                <top>1200</top>
+                <left>0</left>
+                <right>0</right>
+                <height>1200</height>
+
+                <onleft>501</onleft>
+                <onright>501</onright>
+                <onup>96</onup>
+                <ondown>60</ondown>
+
+                <pagecontrol>60</pagecontrol>
+                <preloaditems>2</preloaditems>
+                <orientation>horizontal</orientation>
+                <focusposition>0</focusposition>
+                <movement>6</movement>
+                <viewtype label="$LOCALIZE[32002]">icon</viewtype>
+
+                <itemlayout width="496" height="740">
+                    <control type="group">
+                        <left>182</left>
+                        <include content="PosterLayout">
+                            <param name="LabelColor" value="TextDim" />
+                            <param name="Focused" value="false" />
+                            <param name="ListID" value="501" />
+                            <param name="ShowProgress" value="true" />
+                        </include>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout width="496" height="740">
+                    <control type="group">
+                        <visible>Control.HasFocus(501)</visible>
+                        <left>182</left>
+                        <include content="PosterLayout">
+                            <param name="LabelColor" value="TextBright" />
+                            <param name="Focused" value="true" />
+                            <param name="ListID" value="501" />
+                            <param name="ShowProgress" value="true" />
+                        </include>
+                    </control>
+                    <control type="group">
+                        <visible>!Control.HasFocus(501)</visible>
+                        <left>182</left>
+                        <include content="PosterLayout">
+                            <param name="LabelColor" value="TextDim" />
+                            <param name="Focused" value="true" />
+                            <param name="ListID" value="501" />
+                            <param name="ShowProgress" value="true" />
+                        </include>
+                    </control>
+                </focusedlayout>
+
+            </control>
+
+            <!-- Full screen art -->
+            <control type="image">
+                <animation type="Conditional" condition="!Control.HasFocus(96)">
+                    <effect type="fade" start="100" end="0" time="200" />
+                </animation>
+                <left>0</left>
+                <top>0</top>
+                <width>3840</width>
+                <height>2160</height>
+                <fadetime>400</fadetime>
+                <aspectratio scalediffuse="true">scale</aspectratio>
+                <texture background="true">$VAR[BackgroundImageWithoutFallback]</texture>
+            </control>
+        </control>
+    </include>
+
+</includes>

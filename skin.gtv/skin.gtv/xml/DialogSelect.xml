@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">9000</defaultcontrol>
+
+    <controls>
+        <control type="group" id="9000">
+
+            <include condition="!String.IsEmpty(Window(Home).Property(SkinViewtypes.DialogIsActive))">ViewSelector</include>
+            <include condition="String.IsEmpty(Window(Home).Property(SkinViewtypes.DialogIsActive))">GeneralSelector</include>
+
+        </control>
+    </controls>
+</window>

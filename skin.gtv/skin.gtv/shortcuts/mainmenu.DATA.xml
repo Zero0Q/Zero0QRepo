@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts>
+    <shortcut>
+        <defaultID>foryou</defaultID>
+        <label>For You</label>
+        <label2 />
+        <icon>DefaultAddonRecommendations.png</icon>
+        <action>ActivateWindow(Home)</action>
+    </shortcut>
+
+    <shortcut>
+        <defaultID>movies</defaultID>
+        <label>Movies</label>
+        <label2 />
+        <icon>DefaultMovies.png</icon>
+        <action>ActivateWindow(videos,videodb://movies/titles/,return)</action>
+    </shortcut>
+    
+    <shortcut>
+        <defaultID>tvshows</defaultID>
+        <label>Shows</label>
+        <label2 />
+        <icon>DefaultTVShows.png</icon>
+        <action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+    </shortcut>
+
+    <shortcut>
+        <defaultID>apps</defaultID>
+        <label>Apps</label>
+        <label2 />
+        <icon>DefaultAddon.png</icon>
+        <action>ActivateWindow(addonbrowser)</action>
+    </shortcut>
+
+    <shortcut>
+        <defaultID>library</defaultID>
+        <label>Library</label>
+        <label2 />
+        <icon>DefaultFolder.png</icon>
+        <action>ActivateWindow(videos,sources://video/,return)</action>
+    </shortcut>
+</shortcuts>
