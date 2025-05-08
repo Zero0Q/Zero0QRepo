@@ -74,5 +74,73 @@
                 <onclick>ActivateWindow(1101)</onclick>
             </control>
         </control>
+
+        <control type="grouplist" id="9000">
+            <top>100</top>
+            <left>100</left>
+            <width>800</width>
+            <height>600</height>
+            <itemgap>2</itemgap>
+            <orientation>vertical</orientation>
+            <onleft>9000</onleft>
+            <onright>9000</onright>
+            <onup>9000</onup>
+            <ondown>9000</ondown>
+
+            <control type="group" id="1">
+                <height>50</height>
+                <width>100%</width>
+                <control type="label">
+                    <description>TMDB Settings Header</description>
+                    <label>$LOCALIZE[31600]</label>
+                    <font>font14</font>
+                    <textcolor>white</textcolor>
+                </control>
+            </control>
+
+            <control type="edit" id="9001">
+                <description>TMDB API Key</description>
+                <label>$LOCALIZE[31601]</label>
+                <width>100%</width>
+                <height>50</height>
+                <font>font13</font>
+                <texturefocus>button-focus.png</texturefocus>
+                <texturenofocus>button-nofocus.png</texturenofocus>
+                <onclick>Skin.SetString(TMDBApiKey)</onclick>
+            </control>
+
+            <control type="radiobutton" id="9002">
+                <description>Enable TMDB Widgets</description>
+                <label>$LOCALIZE[31612]</label>
+                <width>100%</width>
+                <height>50</height>
+                <font>font13</font>
+                <texturefocus>button-focus.png</texturefocus>
+                <texturenofocus>button-nofocus.png</texturenofocus>
+                <onclick>Skin.ToggleSetting(EnableTMDBWidgets)</onclick>
+                <selected>Skin.HasSetting(EnableTMDBWidgets)</selected>
+            </control>
+
+            <control type="spincontrol" id="9003">
+                <description>Widget Update Interval</description>
+                <label>$LOCALIZE[31613]</label>
+                <width>100%</width>
+                <height>50</height>
+                <font>font13</font>
+                <texturefocus>button-focus.png</texturefocus>
+                <texturenofocus>button-nofocus.png</texturenofocus>
+                <onup>9002</onup>
+                <ondown>9004</ondown>
+                <onleft>9003</onleft>
+                <onright>9003</onright>
+                <reverse>yes</reverse>
+                <spinwidth>35</spinwidth>
+                <spinheight>35</spinheight>
+                <textureup>arrow-up.png</textureup>
+                <texturedown>arrow-down.png</texturedown>
+                <textureupfocus>arrow-up-focus.png</textureupfocus>
+                <texturedownfocus>arrow-down-focus.png</texturedownfocus>
+            </control>
+        </control>
     </controls>
 </window>

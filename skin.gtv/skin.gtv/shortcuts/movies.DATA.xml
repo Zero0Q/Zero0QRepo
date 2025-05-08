@@ -42,4 +42,39 @@
         <icon />
         <action>ActivateWindow(Videos,videodb://movies/years/,return)</action>
     </shortcut>
+    <shortcut>
+        <defaultID>31602</defaultID>
+        <label>$LOCALIZE[31602]</label>
+        <label2 />
+        <icon>special://skin/media/tmdb.png</icon>
+        <action>RunScript(script.gtv.helper,action=tmdb,type=movies,category=trending)</action>
+    </shortcut>
+    <shortcut>
+        <defaultID>31603</defaultID>
+        <label>$LOCALIZE[31603]</label>
+        <label2 />
+        <icon>special://skin/media/tmdb.png</icon>
+        <action>RunScript(script.gtv.helper,action=tmdb,type=movies,category=popular)</action>
+    </shortcut>
+    <shortcut>
+        <defaultID>31604</defaultID>
+        <label>$LOCALIZE[31604]</label>
+        <label2 />
+        <icon>special://skin/media/tmdb.png</icon>
+        <action>RunScript(script.gtv.helper,action=tmdb,type=movies,category=top_rated)</action>
+    </shortcut>
+    <shortcut>
+        <defaultID>31605</defaultID>
+        <label>$LOCALIZE[31605]</label>
+        <label2 />
+        <icon>special://skin/media/tmdb.png</icon>
+        <action>RunScript(script.gtv.helper,action=tmdb,type=movies,category=now_playing)</action>
+    </shortcut>
+    <shortcut>
+        <defaultID>31606</defaultID>
+        <label>$LOCALIZE[31606]</label>
+        <label2 />
+        <icon>special://skin/media/tmdb.png</icon>
+        <action>RunScript(script.gtv.helper,action=tmdb,type=movies,category=upcoming)</action>
+    </shortcut>
 </shortcuts>

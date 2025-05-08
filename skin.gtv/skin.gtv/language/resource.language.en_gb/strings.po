@@ -210,7 +210,61 @@ msgctxt "#31537"
 msgid "Widget color glow brightness"
 msgstr ""
 
+msgctxt "#31600"
+msgid "TMDB Settings"
+msgstr ""
 
+msgctxt "#31601"
+msgid "TMDB API Key"
+msgstr ""
+
+msgctxt "#31602"
+msgid "TMDB Trending Movies"
+msgstr ""
+
+msgctxt "#31603"
+msgid "TMDB Popular Movies"
+msgstr ""
+
+msgctxt "#31604"
+msgid "TMDB Top Rated Movies"
+msgstr ""
+
+msgctxt "#31605"
+msgid "TMDB Now Playing"
+msgstr ""
+
+msgctxt "#31606"
+msgid "TMDB Upcoming Movies"
+msgstr ""
+
+msgctxt "#31607"
+msgid "TMDB Trending Shows"
+msgstr ""
+
+msgctxt "#31608"
+msgid "TMDB Popular Shows"
+msgstr ""
+
+msgctxt "#31609"
+msgid "TMDB Top Rated Shows"
+msgstr ""
+
+msgctxt "#31610"
+msgid "TMDB On The Air"
+msgstr ""
+
+msgctxt "#31611"
+msgid "TMDB Airing Today"
+msgstr ""
+
+msgctxt "#31612"
+msgid "Enable TMDB Widgets"
+msgstr ""
+
+msgctxt "#31613"
+msgid "Widget Update Interval (minutes)"
+msgstr ""
 
 msgctxt "#32001"
 msgid "Landscape flow"

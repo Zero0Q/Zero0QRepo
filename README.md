@@ -12,7 +12,7 @@ A Kodi repository featuring the GTV skin and helper addons for a Google TV-like 
 ### Method 2: Direct URL Installation
 1. In Kodi, go to Settings → File Manager
 2. Click "Add source"
-3. For the source path, enter: `https://raw.githubusercontent.com/Zero0Q/Zero0QRepo/master/`
+3. For the source path, enter: `https://zero0q.github.io/Zero0QRepo/`
 4. Give it a name (e.g. "Zero0QRepo") and click OK
 5. Go back to the home screen
 6. Go to Add-ons
@@ -25,7 +25,7 @@ A Kodi repository featuring the GTV skin and helper addons for a Google TV-like 
 2. Enable "Unknown sources" if not already enabled
 3. Copy this URL into a text editor on your device:
 ```
-plugin://repository.zero0qrepo?install=true&url=https://github.com/Zero0Q/Zero0QRepo/raw/master/repository.zero0qrepo/repository.zero0qrepo-0.0.4.zip
+plugin://repository.zero0qrepo?install=true&url=https://zero0q.github.io/Zero0QRepo/repository.zero0qrepo/repository.zero0qrepo-0.0.4.zip
 ```
 4. Create a new text file and paste the URL into it
 5. Save the file with a `.strm` extension (e.g. `install-repo.strm`)
